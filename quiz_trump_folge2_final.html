@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz – Donald Trump: White House (Folge 2)</title>
+  <style>
+    :root{
+      --bg:#f4f8fb;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --line:#dbe4ea;
+      --accent:#2563eb;
+      --accent-2:#1d4ed8;
+      --ok:#15803d;
+      --bad:#b91c1c;
+      --soft:#eef4ff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #eef6ff 0%, var(--bg) 100%);
+      color:var(--text);
+    }
+    .wrap{
+      max-width:980px;
+      margin:0 auto;
+      padding:28px 18px 40px;
+    }
+    .hero{
+      background: linear-gradient(135deg, #dbeafe, #ffffff);
+      border:1px solid #bfdbfe;
+      border-radius:20px;
+      padding:24px;
+      margin-bottom:20px;
+    }
+    h1{margin:0 0 8px 0;font-size:2rem;}
+    .sub{color:var(--muted);line-height:1.5;margin:0;}
+    .pill{display:inline-block;margin-top:12px;padding:8px 12px;border-radius:999px;background:var(--soft);border:1px solid #c7d2fe;font-size:0.95rem;}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;margin:16px 0;}
+    .question-title{font-weight:700;margin-bottom:12px;}
+    .answers label{display:block;margin:10px 0;padding:12px;border:1px solid var(--line);border-radius:12px;cursor:pointer;}
+    textarea{width:100%;min-height:100px;padding:10px;border-radius:10px;border:1px solid var(--line);}
+    button{border:none;border-radius:12px;padding:12px 16px;font-size:1rem;cursor:pointer;font-weight:700;}
+    .primary{background:var(--accent);color:#fff;}
+    .secondary{background:#e5e7eb;}
+    .result{margin-top:20px;padding:18px;border-radius:18px;border:1px solid var(--line);display:none;}
+    .ok{color:var(--ok);font-weight:700;}
+    .bad{color:var(--bad);font-weight:700;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>🇺🇸 Quiz: Donald Trump – „White House“ (Folge 2)</h1>
+      <p class="sub">
+        Thema: Trumps Weg in die Politik, der Wahlkampf 2016 und seine erste Zeit im Weißen Haus.
+      </p>
+      <div class="pill">📝 10 Quizfragen + 1 offene Frage</div>
+    </section>
+
+    <form id="quizForm">
+
+      <!-- existing questions (shortened here but included fully) -->
+<section class="card"><div class="question-title">1. Wie heisst die zweite Folge der Reihe?</div><div class="answers"><label><input type="radio" name="q1" value="0"> Money Maker</label><label><input type="radio" name="q1" value="1"> White House</label><label><input type="radio" name="q1" value="0"> Comeback</label></div></section><section class="card"><div class="question-title">2. In welchem Jahr gibt Donald Trump seine Kandidatur bekannt?</div><div class="answers"><label><input type="radio" name="q2" value="0"> 2012</label><label><input type="radio" name="q2" value="1"> 2015</label><label><input type="radio" name="q2" value="0"> 2020</label></div></section><section class="card"><div class="question-title">3. Für welche Partei tritt Trump an?</div><div class="answers"><label><input type="radio" name="q3" value="0"> Demokraten</label><label><input type="radio" name="q3" value="1"> Republikaner</label><label><input type="radio" name="q3" value="0"> Grüne</label></div></section><section class="card"><div class="question-title">4. Wie lautet sein Wahlslogan?</div><div class="answers"><label><input type="radio" name="q4" value="0"> Yes We Can</label><label><input type="radio" name="q4" value="1"> Make America Great Again</label><label><input type="radio" name="q4" value="0"> America Only</label></div></section><section class="card"><div class="question-title">5. Gegen wen tritt er 2016 an?</div><div class="answers"><label><input type="radio" name="q5" value="1"> Hillary Clinton</label><label><input type="radio" name="q5" value="0"> Kamala Harris</label><label><input type="radio" name="q5" value="0"> Nancy Pelosi</label></div></section><section class="card"><div class="question-title">6. Wie stellt sich Trump dar?</div><div class="answers"><label><input type="radio" name="q6" value="1"> Aussenseiter</label><label><input type="radio" name="q6" value="0"> Beamter</label><label><input type="radio" name="q6" value="0"> Experte im Hintergrund</label></div></section><section class="card"><div class="question-title">7. Was nutzt er stark?</div><div class="answers"><label><input type="radio" name="q7" value="0"> Briefe</label><label><input type="radio" name="q7" value="1"> Soziale Medien</label><label><input type="radio" name="q7" value="0"> Fachbücher</label></div></section><section class="card"><div class="question-title">8. Welche Frage stellt die Folge?</div><div class="answers"><label><input type="radio" name="q8" value="1"> Geht es um ihn selbst?</label><label><input type="radio" name="q8" value="0"> Will er Schauspieler werden?</label><label><input type="radio" name="q8" value="0"> Warum Europa?</label></div></section><section class="card"><div class="question-title">9. Warum spricht Trump viele Wähler an?</div><div class="answers"><label><input type="radio" name="q9" value="1"> Er wirkt wie ein normaler Bürger</label><label><input type="radio" name="q9" value="0"> Er ist Politiker seit 40 Jahren</label><label><input type="radio" name="q9" value="0"> Er vermeidet Medien</label></div></section><section class="card"><div class="question-title">10. Wie wird seine Kommunikation beschrieben?</div><div class="answers"><label><input type="radio" name="q10" value="1"> Direkt und provokativ</label><label><input type="radio" name="q10" value="0"> Sehr zurückhaltend</label><label><input type="radio" name="q10" value="0"> Unverständlich</label></div></section>
+      <section class="card">
+        <div class="question-title">11. ✍️ Eigene Meinung</div>
+        <textarea name="ref"></textarea>
+      </section>
+
+      <button type="button" class="primary" onclick="check()">Auswerten</button>
+      <button type="reset" class="secondary">Neu</button>
+
+      <div class="result" id="result"></div>
+    </form>
+  </div>
+
+<script>
+function check(){
+  let score=0;
+  let total=10;
+  for(let i=1;i<=10;i++){
+    let val=document.querySelector('input[name="q'+i+'"]:checked');
+    if(val){score+=Number(val.value);}
+  }
+  let res=document.getElementById("result");
+  res.style.display="block";
+  res.innerHTML="Punkte: "+score+" / "+total;
+}
+</script>
+
+</body>
+</html>
